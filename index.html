@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>Sedlak Weather App</title>
+  </head>
+  <body>
+    
+    <header>5 Day Forecast</header>
+
+    <div class="row"></div>
+
+    <form class="inputForm">
+      <div class="mb 3 float-left">
+        <label for="cityInput">Please enter a city to see the 5 day weather forecast!</label>
+        <input type="city" class="city-input" id="exampleCity" placeholder="Ex. New York City"/>
+      </div>
+      <button type="search" class="btn btn-primary" id="search-city">Search City</button>
+      <div class="'searchHistory"></div>
+    </form>
+
+    <div class="card-container">
+      <div class="row">
+        <div class="card col-12 col-md-2 float-right monday" style="width: 18rem">
+          <div class="card-header">Monday</div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item1"></li>
+            <li class="list-group-item2"></li>
+            <li class="list-item-group3"></li>
+            <li class="list-item-group4"></li>
+          </ul>
+        </div>
+
+        <div class="card col-12 col-md-2 float-right tuesday" style="width: 18rem">
+          <div class="card-header">Tuesday</div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item1"></li>
+            <li class="list-group-item2"></li>
+            <li class="list-item-group3"></li>
+            <li class="list-item-group4"></li>
+          </ul>
+        </div>
+
+        <div class="card col-12 col-md-2 float-right wednesday" style="width: 18rem">
+          <div class="card-header">Wednesday</div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item1"></li>
+            <li class="list-group-item2"></li>
+            <li class="list-item-group3"></li>
+            <li class="list-item-group4"></li>
+          </ul>
+        </div>
+
+        <div class="card col-12 col-md-2 float-right thursday" style="width: 18rem">
+          <div class="card-header">Thursday</div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item1"></li>
+            <li class="list-group-item2"></li>
+            <li class="list-item-group3"></li>
+            <li class="list-item-group4"></li>
+          </ul>
+        </div>
+
+        <div class="card col-12 col-md-2 float-right friday" style="width: 18rem">
+          <div class="card-header">Friday</div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item1"></li>
+            <li class="list-group-item2"></li>
+            <li class="list-item-group3"></li>
+            <li class="list-item-group4"></li>
+          </ul>
+          <div class="searchedCityHistory"></div>
+        </div>
+     </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script src="./assets/script.js"></script>
+  </body>
+</html>

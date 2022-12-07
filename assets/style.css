@@ -1,0 +1,11 @@
+header {
+    text-align: center;
+};
+
+body {
+    background-color: rgb(124, 124, 198);
+};
+
+.inputForm {
+    size: 100px;
+}
