@@ -12,6 +12,14 @@ inputForm.addEventListener('submit', function(e) {
     console.log(citySearch.value);
 });
 
+function init() {
+    setInterval(function() {
+    $(`currentDay`).text((dayjs()).format(`dddd MMM, YYYY [-] h:mm:ss a`));
+}, 1000);
+}
+
+init();
+
 function fiveDay(cityName) {
     var units = 'imperial';
     var lang = 'en';
@@ -24,6 +32,14 @@ function fiveDay(cityName) {
         for (let i = 0; i < 5; i++) {
             console.log(card[i])
             console.log(fiveData.list[(i * 8)])
+            console.log(fiveData.list[(i * 8)].main.temp)
+            console.log(fiveData.list[(i * 8)].wind.speed)
+            console.log(fiveData.list[(i * 8)].main.humidity)
+            card[i].children[1].children[0].innerHTML = "CORRECT THE DAY" //dayjs().format(`dddd MMM, YYYY [-] h:mm:ss a`);
+            card[i].children[1].children[1].innerHTML = fiveData.list[(i * 8)].main.temp + "degrees F"
+            card[i].children[1].children[2].innerHTML = fiveData.list[(i * 8)].wind.speed
+            card[i].children[1].children[3].innerHTML = fiveData.list[(i * 8)].main.humidity
+
         }
      })
 };
@@ -32,34 +48,34 @@ function fiveDay(cityName) {
 //humidity wind speed temp date
 
 // card[0] Monday
-// card[0].children[1].children[0].innerHTML
-// card[0].children[1].children[1].innerHTML
-// card[0].children[1].children[2].innerHTML
-// card[0].children[1].children[3].innerHTML
+// card[0].children[1].children[0].innerHTML = init()
+// card[0].children[1].children[1].innerHTML = .main.temp
+// card[0].children[1].children[2].innerHTML = .wind.speed
+// card[0].children[1].children[3].innerHTML = .main.humidity
 
 // card[1] Tuesday
-// card[1].children[1].children[0].innerHTML
-// card[1].children[1].children[1].innerHTML
-// card[1].children[1].children[2].innerHTML
-// card[1].children[1].children[3].innerHTML
+// card[1].children[1].children[0].innerHTML = 
+// card[1].children[1].children[1].innerHTML = .main.temp
+// card[1].children[1].children[2].innerHTML = .wind.speed
+// card[1].children[1].children[3].innerHTML = .main.humidity
 
 // card[2] Wednesday
-// card[2].children[1].children[0].innerHTML
-// card[2].children[1].children[1].innerHTML
-// card[2].children[1].children[2].innerHTML
-// card[2].children[1].children[3].innerHTML
+// card[2].children[1].children[0].innerHTML = ()
+// card[2].children[1].children[1].innerHTML = ()
+// card[2].children[1].children[2].innerHTML = ()
+// card[2].children[1].children[3].innerHTML = ()
 
 //card[3] Thursday
-// card[3].children[1].children[0].innerHTML
-// card[3].children[1].children[1].innerHTML
-// card[3].children[1].children[2].innerHTML
-// card[3].children[1].children[3].innerHTML
+// card[3].children[1].children[0].innerHTML = ()
+// card[3].children[1].children[1].innerHTML = ()
+// card[3].children[1].children[2].innerHTML = ()
+// card[3].children[1].children[3].innerHTML = ()
 
-//card[3] Friday
-// card[4].children[1].children[0].innerHTML
-// card[4].children[1].children[1].innerHTML
-// card[4].children[1].children[2].innerHTML
-// card[4].children[1].children[3].innerHTML
+//card[4] Friday
+// card[4].children[1].children[0].innerHTML = ()
+// card[4].children[1].children[1].innerHTML = ()
+// card[4].children[1].children[2].innerHTML = ()
+// card[4].children[1].children[3].innerHTML = ()
 
 
 
