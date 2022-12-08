@@ -16,7 +16,7 @@ function fiveDay(cityName) {
     var units = 'imperial';
     var lang = 'en';
     console.log(cityName)
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}`).then(function(responseBody) {
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}&units=${units}&lang=${lang}`).then(function(responseBody) {
         console.log(responseBody)
         return responseBody.json();
     }).then(function(fiveData) {
@@ -26,7 +26,43 @@ function fiveDay(cityName) {
             console.log(fiveData.list[(i * 8)])
         }
      })
-;}
+};
+
+// console.log(card[0].children[1].children);  use these to navigate and then line 26 to display inside the box
+//humidity wind speed temp date
+
+// card[0] Monday
+// card[0].children[1].children[0].innerHTML
+// card[0].children[1].children[1].innerHTML
+// card[0].children[1].children[2].innerHTML
+// card[0].children[1].children[3].innerHTML
+
+// card[1] Tuesday
+// card[1].children[1].children[0].innerHTML
+// card[1].children[1].children[1].innerHTML
+// card[1].children[1].children[2].innerHTML
+// card[1].children[1].children[3].innerHTML
+
+// card[2] Wednesday
+// card[2].children[1].children[0].innerHTML
+// card[2].children[1].children[1].innerHTML
+// card[2].children[1].children[2].innerHTML
+// card[2].children[1].children[3].innerHTML
+
+//card[3] Thursday
+// card[3].children[1].children[0].innerHTML
+// card[3].children[1].children[1].innerHTML
+// card[3].children[1].children[2].innerHTML
+// card[3].children[1].children[3].innerHTML
+
+//card[3] Friday
+// card[4].children[1].children[0].innerHTML
+// card[4].children[1].children[1].innerHTML
+// card[4].children[1].children[2].innerHTML
+// card[4].children[1].children[3].innerHTML
+
+
+
 
 
 
