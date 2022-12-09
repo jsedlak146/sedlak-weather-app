@@ -16,24 +16,24 @@
     <link rel="stylesheet" href="./assets/style.css" />
     <title>Sedlak Weather App</title>
   </head>
-  <body class = "bg-primary ">
+  <body>
     
-    <header>5 Day Forecast</header>
+    <header class="bg-primary">Weather Dashboard</header>
 
     <div class="row"></div>
 
     <form class="inputForm">
       <div class="mb 3 float-left">
-        <label for="cityInput">Please enter a city to see the 5 day weather forecast!</label>
+        <label for="cityInput">Search for a City:</label>
         <input type="text" class="city-input" id="exampleCity" placeholder="Ex. New York City"/>
       </div>
-      <button type="submit" class="btn btn-danger" id="search-city">Search City</button>
+      <button type="submit" class="btn btn-danger" id="search-city">Search</button>
       <div class="'searchHistory"></div>
     </form>
 
     <div class="card-container">
       <div class="row">
-        <div class="card col-12 col-md-2 float-right monday" style="width: 18rem">
+        <div class="card col-12 col-md-2 float-right monday bg-primary" style="width: 18rem">
           <div class="card-header">Day 1</div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item1"></li>
@@ -43,7 +43,7 @@
           </ul>
         </div>
 
-        <div class="card col-12 col-md-2 float-right tuesday" style="width: 18rem">
+        <div class="card col-12 col-md-2 float-right tuesday bg-primary" style="width: 18rem">
           <div class="card-header">Day 2</div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item1"></li>
@@ -53,7 +53,7 @@
           </ul>
         </div>
 
-        <div class="card col-12 col-md-2 float-right wednesday" style="width: 18rem">
+        <div class="card col-12 col-md-2 float-right wednesday bg-primary" style="width: 18rem">
           <div class="card-header">Day 3</div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item1"></li>
@@ -63,7 +63,7 @@
           </ul>
         </div>
 
-        <div class="card col-12 col-md-2 float-right thursday" style="width: 18rem">
+        <div class="card col-12 col-md-2 float-right thursday bg-primary" style="width: 18rem">
           <div class="card-header">Day 4</div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item1"></li>
@@ -73,7 +73,7 @@
           </ul>
         </div>
 
-        <div class="card col-12 col-md-2 float-right friday" style="width: 18rem">
+        <div class="card col-12 col-md-2 float-right friday bg-primary" style="width: 18rem">
           <div class="card-header">Day 5</div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item1"></li>
