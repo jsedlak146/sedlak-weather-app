@@ -5,7 +5,7 @@ var inputForm = document.querySelector('.inputForm');
 var card = document.querySelectorAll('.card');
 var apiKey = '6bc39d38aebd579551385cf995faaa5f';
 
-//this is the button to search for your city
+//this is the button to search for your city, and will help retrun the information needed
 
 inputForm.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -23,7 +23,8 @@ init();
 
 
 //this is my function, it delivers the five day weather forecast
-//by using a loop that goes to each day and fills in my weather cards for Monday-FRiday
+//by using a loop that goes to each day and fills in my weather cards for Monday-Friday
+//the information for temp, wind speed and humidity then populate by appending the html children
 function fiveDay(cityName) {
     var units = 'imperial';
     var lang = 'en';
