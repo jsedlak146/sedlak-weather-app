@@ -40,14 +40,23 @@ function fiveDay(cityName) {
             console.log(fiveData.list[(i * 8)].wind.speed)
             console.log(fiveData.list[(i * 8)].main.humidity)
             card[i].children[1].children[0].innerHTML = "date"
-            card[i].children[1].children[1].innerHTML = fiveData.list[(i * 8)].main.temp + "- degrees F"
-            card[i].children[1].children[2].innerHTML = fiveData.list[(i * 8)].wind.speed + "Wind Speed - MPH"
+            card[i].children[1].children[1].innerHTML = fiveData.list[(i * 8)].main.temp + "- Degrees F"
+            card[i].children[1].children[2].innerHTML = fiveData.list[(i * 8)].wind.speed + "- MPH Wind Speed"
             card[i].children[1].children[3].innerHTML = fiveData.list[(i * 8)].main.humidity + "% - Humidity"
 
         }
      })
 };
 
+//local storage function to save your past city searches
 
-//This is your current day weather API, use in fetch stuff currentDay
-//https://api.openweathermap.org/data/2.5/weather?q={cityname}&appid={6bc39d38aebd579551385cf995faaa5f}
+function setLocalStorage(elementToAdd, indexToSet) {
+    var currentStorage = getLocalStorage();
+    currentStorage[indexToSet] = elementToAdd;
+    localStorage.setItem("cityName", JSON.stringify(currentStorage));
+  }
+  
+  function getLocalStorage() {
+    return JSON.parse(localStorage.getItem('cityName')) || [];
+  };
+
