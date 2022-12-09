@@ -1,10 +1,11 @@
+//these are the variables i will be needing
+
 var citySearch = document.querySelector('.city-input');
-// var weather = document.querySelector('');
 var inputForm = document.querySelector('.inputForm');
 var card = document.querySelectorAll('.card');
-// console.log(card[0].children[1].children);  use these to navigate and then line 26 to display inside the boxes
-// card[0].children[1].children[3].innerHTML = "frank Sinatra"
 var apiKey = '6bc39d38aebd579551385cf995faaa5f';
+
+//this is the button to search for your city
 
 inputForm.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -20,6 +21,9 @@ function init() {
 
 init();
 
+
+//this is my function, it delivers the five day weather forecast
+//by using a loop that goes to each day and fills in my weather cards for Monday-FRiday
 function fiveDay(cityName) {
     var units = 'imperial';
     var lang = 'en';
@@ -35,55 +39,15 @@ function fiveDay(cityName) {
             console.log(fiveData.list[(i * 8)].main.temp)
             console.log(fiveData.list[(i * 8)].wind.speed)
             console.log(fiveData.list[(i * 8)].main.humidity)
-            card[i].children[1].children[0].innerHTML = "CORRECT THE DAY" //dayjs().format(`dddd MMM, YYYY [-] h:mm:ss a`);
-            card[i].children[1].children[1].innerHTML = fiveData.list[(i * 8)].main.temp + "degrees F"
-            card[i].children[1].children[2].innerHTML = fiveData.list[(i * 8)].wind.speed
-            card[i].children[1].children[3].innerHTML = fiveData.list[(i * 8)].main.humidity
+            card[i].children[1].children[0].innerHTML = "date"
+            card[i].children[1].children[1].innerHTML = fiveData.list[(i * 8)].main.temp + "- degrees F"
+            card[i].children[1].children[2].innerHTML = fiveData.list[(i * 8)].wind.speed + "Wind Speed - MPH"
+            card[i].children[1].children[3].innerHTML = fiveData.list[(i * 8)].main.humidity + "% - Humidity"
 
         }
      })
 };
 
-// console.log(card[0].children[1].children);  use these to navigate and then line 26 to display inside the box
-//humidity wind speed temp date
-
-// card[0] Monday
-// card[0].children[1].children[0].innerHTML = init()
-// card[0].children[1].children[1].innerHTML = .main.temp
-// card[0].children[1].children[2].innerHTML = .wind.speed
-// card[0].children[1].children[3].innerHTML = .main.humidity
-
-// card[1] Tuesday
-// card[1].children[1].children[0].innerHTML = 
-// card[1].children[1].children[1].innerHTML = .main.temp
-// card[1].children[1].children[2].innerHTML = .wind.speed
-// card[1].children[1].children[3].innerHTML = .main.humidity
-
-// card[2] Wednesday
-// card[2].children[1].children[0].innerHTML = ()
-// card[2].children[1].children[1].innerHTML = ()
-// card[2].children[1].children[2].innerHTML = ()
-// card[2].children[1].children[3].innerHTML = ()
-
-//card[3] Thursday
-// card[3].children[1].children[0].innerHTML = ()
-// card[3].children[1].children[1].innerHTML = ()
-// card[3].children[1].children[2].innerHTML = ()
-// card[3].children[1].children[3].innerHTML = ()
-
-//card[4] Friday
-// card[4].children[1].children[0].innerHTML = ()
-// card[4].children[1].children[1].innerHTML = ()
-// card[4].children[1].children[2].innerHTML = ()
-// card[4].children[1].children[3].innerHTML = ()
-
-
-
-
-
-
-//This is your 5 day API key, use in fetch stuff
-//https://api.openweathermap.org/data/2.5/forecast?q={cityname}&appid={6bc39d38aebd579551385cf995faaa5f}
 
 //This is your current day weather API, use in fetch stuff currentDay
 //https://api.openweathermap.org/data/2.5/weather?q={cityname}&appid={6bc39d38aebd579551385cf995faaa5f}
